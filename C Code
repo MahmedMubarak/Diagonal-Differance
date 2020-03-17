@@ -34,7 +34,7 @@ int main()
     }
     printf("-------------------------------------\n");
     // sum of the first diagonal
-    for ( int i = 0 ; i < 3 ; i++)
+    for ( int i = 0 ; i < n ; i++)
     {
         for ( int j = i ; j <= i; j++ )
         {
@@ -44,7 +44,7 @@ int main()
     printf(" The sum of first Diagnal is :   %d\n", sum_first_diagonal);
     printf("-----------------------------------------------\n");
     // for loop for sum the second diagonal
-    for ( int i = 0 ; i < 3 ; i++)
+    for ( int i = 0 ; i < n ; i++)
     {
         for ( int j = n-1 ; j >=0 ; j-- )
         {
