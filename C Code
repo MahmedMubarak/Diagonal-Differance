@@ -1,0 +1,64 @@
+//libraries
+#include <stdio.h>
+#include <stdlib.h>
+// the main function
+int main()
+{
+    // Decleration the variable we need to get the size of array
+    int n , sum_first_diagonal = 0 , sum_second_diagonal = 0 , abselote = 0;
+    // get the N variable from the user
+    printf(" Please enter the Size of you array and know the matrix will be n*n \n");
+    scanf("%d",&n);
+    printf("---------------------------------------------\n");
+    // Decleration the array we need to get
+    int arr[n][n];
+    // ask the matrix from the user
+    printf(" Please enter your matrix row by row \n");
+    // fro loop to take the matrix from the user
+    for ( int i = 0 ; i < n ; i++)
+    {
+        for ( int j = 0 ; j < n ; j++)
+        {
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    printf("------------------------------------\n");
+    // print the matrix after Enterd from the user
+    for ( int i = 0 ; i < n ; i++)
+    {
+        for ( int j = 0 ; j < n ; j++)
+        {
+            printf("%d ",arr[i][j]);
+        }
+        printf("\n");
+    }
+    printf("-------------------------------------\n");
+    // sum of the first diagonal
+    for ( int i = 0 ; i < 3 ; i++)
+    {
+        for ( int j = i ; j <= i; j++ )
+        {
+            sum_first_diagonal += arr[i][j];
+        }
+    }
+    printf(" The sum of first Diagnal is :   %d\n", sum_first_diagonal);
+    printf("-----------------------------------------------\n");
+    // for loop for sum the second diagonal
+    for ( int i = 0 ; i < 3 ; i++)
+    {
+        for ( int j = 2 ; j >=0 ; j-- )
+        {
+            if ( i + j == n - 1)
+            {
+                sum_second_diagonal += arr[i][j];
+            }
+        }
+    }
+    printf(" The sum of Second Diagnal is :   %d\n", sum_second_diagonal);
+    printf("-----------------------------------------------\n");
+    // print the abselute value for the differance of 2 sums
+    abselote = sum_first_diagonal - sum_second_diagonal;
+    printf("the abseloute value of differance of sum is %d", abs(abselote));
+    printf("-------------------------------------------------\n");
+    return 0 ;
+}
